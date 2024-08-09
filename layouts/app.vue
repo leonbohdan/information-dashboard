@@ -1,15 +1,8 @@
 <script setup>
-import { useDate, useDisplay } from 'vuetify'
+import { useDisplay } from 'vuetify'
 
-const date = useDate()
 const { mobile } = useDisplay()
 const drawer = ref(true)
-
-const currentDate = new Date()
-const fullDateWithWeekday = date.format(currentDate, 'fullDateWithWeekday')
-const fullTime24h = date.format(currentDate, 'fullTime24h')
-
-onMounted(() => {})
 </script>
 
 <template>
@@ -20,8 +13,6 @@ onMounted(() => {})
         :permanent="!mobile"
         :location="mobile ? 'bottom' : undefined"
       >
-        <div>{{ fullDateWithWeekday }} • {{ fullTime24h }}</div>
-
         <v-list>
           <v-list-item title="Navigation drawer"></v-list-item>
           <v-list-item title="Navigation drawer"></v-list-item>
@@ -46,7 +37,9 @@ onMounted(() => {})
       </v-app-bar>
 
       <v-main class="d-flex align-center justify-center" style="min-height: 300px">
-        <slot />
+        <slot>
+          <NuxtPage />
+        </slot>
       </v-main>
     </v-layout>
   </v-app>
