@@ -13,6 +13,7 @@ const fullTime24h = date.format(currentDate, 'fullTime24h')
 </script>
 
 <template>
+  <NuxtLoadingIndicator />
   <div class="d-flex flex-column text-center">
     <h1 class="d-inline-block mb-10">pages/app</h1>
 
