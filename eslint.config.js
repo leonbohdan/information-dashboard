@@ -25,8 +25,7 @@ export default [
           trailingComma: 'all',
           vueIndentScriptAndStyle: true
         }
-      ],
-      'vue/valid-v-slot': [2, { allowModifiers: true }]
+      ]
     }
   }
 ]
