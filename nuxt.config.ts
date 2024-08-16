@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   app: {
@@ -41,6 +42,7 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**']
   },
   vite: {
+    plugins: [svgLoader({})],
     vue: {
       template: {
         transformAssetUrls
