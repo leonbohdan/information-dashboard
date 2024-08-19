@@ -3,7 +3,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { md3 } from 'vuetify/blueprints'
-import { aliases } from '~/assets/icons/vuetify-icons-aliases'
+import { aliases, qi, mdi } from 'assets/icons/vuetify-icons'
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
@@ -20,8 +20,12 @@ export default defineNuxtPlugin((app) => {
       // },
     },
     icons: {
-      defaultSet: 'mdi',
-      aliases
+      defaultSet: 'qi',
+      aliases,
+      sets: {
+        qi,
+        mdi
+      }
     },
     locale: {
       locale: 'en'

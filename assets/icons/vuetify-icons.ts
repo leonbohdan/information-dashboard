@@ -1,12 +1,15 @@
-// import { h } from 'vue'
-// import type { IconSet, IconAliases, IconProps } from 'vuetify'
-import type { IconAliases } from 'vuetify'
-import { aliases as defaultAliases } from 'vuetify/iconsets/mdi'
-import closesvg from '~/assets/icons/close.svg'
+import { h } from 'vue'
+import type { IconSet, IconAliases, IconProps } from 'vuetify'
+import { aliases as defaultAliases, mdi } from 'vuetify/iconsets/mdi'
+
+import close from '~/assets/icons/close.svg?component'
+import arrowDownTray from '~/assets/icons/arrow-down-tray.svg?component'
 
 const aliases: IconAliases = {
   ...defaultAliases,
-  closesvg
+  close: close,
+  'arrow-down-tray': arrowDownTray,
+  radioOn: close
 }
 
 // const aliases: IconAliases = {
@@ -46,8 +49,10 @@ const aliases: IconAliases = {
 //   minus: '...'
 // }
 
-// const custom: IconSet = {
-//   component: (props: IconProps) => h(...),
-// }
+const qi: IconSet = {
+  // component: (props: IconProps) => h('icon', { ...props, class: '' })
+  // component: (props: IconProps) => h('svg', [closeSvg, arrowDownTray])
+  component: (props: IconProps) => h('i', { ...props }, [h(close), h(arrowDownTray)])
+}
 
-export { aliases }
+export { aliases, qi, mdi }

@@ -25,6 +25,7 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@nuxt/icon": "^1.4.5",
     "eslint": "^9.8.0",
     "prettier": "^3.3.3",
     "vite-plugin-vuetify": "^2.0.4",

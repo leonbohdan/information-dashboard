@@ -36,7 +36,8 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxt/icon'
   ],
   pinia: {
     storesDirs: ['./stores/**']
@@ -48,6 +49,20 @@ export default defineNuxtConfig({
         transformAssetUrls
       }
     }
+  },
+  icon: {
+    serverBundle: {
+      collections: ['mdi']
+    },
+    aliases: {
+      nuxt: 'logos:nuxt-icon'
+    },
+    customCollections: [
+      {
+        prefix: 'qi',
+        dir: './assets/icons'
+      }
+    ]
   },
   vue: {},
   build: {

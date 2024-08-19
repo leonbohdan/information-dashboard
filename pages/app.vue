@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useDate } from 'vuetify'
-import IconLoader from '~/components/icons/icon-loader.vue'
 import iconComponent from '~/assets/icons/close.svg?component'
 import DeleteIcon from '~/components/icons/delete-icon.vue'
 
@@ -23,21 +22,54 @@ const time = date.format(currentDate, 'fullDateWithWeekday')
 
     <v-btn>btn</v-btn>
     <hr />
-    <v-icon icon="mdi-close"></v-icon>
-    <hr />
+    <v-icon icon="mdi:mdi-close"></v-icon>
+    <v-icon icon="mdi:mdi-information"></v-icon>
 
-    <!--    <icon-loader name="close" width="30px" height="30px" />-->
+    <hr class="my-2" />
+
+    <v-icon icon="$close"></v-icon>
+    <v-icon icon="$arrow-down-tray"></v-icon>
+    <v-icon icon="qi-arrow-down-tray"></v-icon>
+    <hr />
 
     <component :is="iconComponent" width="50px" height="50px" color="#B9C0D4" />
 
     <delete-icon width="50px" height="50px" color="red" />
 
-    <v-btn icon="$closesvg"></v-btn>
+    <v-btn icon="$arrow-down-tray" variant="text" class="mb-2"></v-btn>
 
-    <v-btn>
-      <v-icon icon="$closesvg" color="red"></v-icon>
+    <v-btn class="mb-2">
+      Button
+      <v-icon icon="$arrow-down-tray"></v-icon>
     </v-btn>
 
-    <v-icon icon="$closesvg" size="60" color="red"></v-icon>
+    <v-btn>
+      Button
+      <v-icon icon="$arrow-down-tray" size="14" color="red"></v-icon>
+    </v-btn>
+
+    <v-icon icon="$arrow-down-tray" size="60" color="red"></v-icon>
+
+    <hr class="my-10" />
+
+    <icon name="qi:academic-cap" size="60" style="color: aqua" />
+
+    <icon name="qi:archive-box" size="80" mode="svg" color="blue" />
+
+    <icon name="qi:arrow-down-tray" size="40" mode="svg" color="#000000" />
+
+    <v-btn class="mb-2">
+      Button
+      <icon name="qi:archive-box" mode="svg" class="ml-2" />
+    </v-btn>
+
+    <v-btn>
+      Button
+      <icon name="qi:archive-box" class="ml-2" />
+    </v-btn>
+
+    <v-btn icon="" size="40">
+      <icon name="qi:archive-box" size="24" />
+    </v-btn>
   </div>
 </template>
