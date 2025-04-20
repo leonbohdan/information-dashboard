@@ -14,9 +14,9 @@ const drawer = ref(true)
         :location="mobile ? 'bottom' : undefined"
       >
         <v-list>
-          <v-list-item title="Navigation drawer"></v-list-item>
-          <v-list-item title="Navigation drawer"></v-list-item>
-          <v-list-item title="Navigation drawer"></v-list-item>
+          <v-list-item title="Navigation drawer">1</v-list-item>
+          <v-list-item title="Navigation drawer">2</v-list-item>
+          <v-list-item title="Navigation drawer">3</v-list-item>
         </v-list>
       </v-navigation-drawer>
 
